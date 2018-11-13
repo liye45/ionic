@@ -1,0 +1,62 @@
+page-b {
+   .top{
+       width: 375px;
+       height: 200px;
+       background-image: url(../../assets/imgs/backgroud.png);
+       background-size: 100% 200px;
+       .img1{
+           border-radius:50%; 
+            position: absolute;
+            top: 50px;
+            left: 137px;
+        }
+
+
+   }
+   .dingdan{
+       width: 100%;
+       height: 40px;
+       background-color: darkgray;
+   }
+   .allding{
+       display: block;
+       float: right;
+   }    
+   .goods2{
+        padding: 0;
+        img{
+            width: 100%;
+        }
+        li{
+            position: relative;
+            width: 30%;
+            float: left;
+            margin: 3px 0 3px 3%;
+            .jiegou{
+                width: 124px;
+                height: 86px;
+            }
+            }
+        
+    }
+    .goods3{
+        padding: 0;
+        img{
+            width: 180px;
+            height: 95px
+
+        }
+        li{
+            position: relative;
+            width: 45%;
+            float: left;
+            margin: 5px 0 5px 3%;
+           
+            
+        }
+  
+
+   }
+   
+ 
+}

@@ -1,0 +1,226 @@
+<!-- <ion-content>
+   Segment buttons with icons 
+    <ion-segment [(ngModel)]="icons" color="secondary">
+      <ion-segment-button value="camera">
+        <ion-icon name="camera"></ion-icon>
+      </ion-segment-button>
+      <ion-segment-button value="bookmark">
+        <ion-icon name="bookmark"></ion-icon>
+      </ion-segment-button>
+    </ion-segment>
+  </ion-content>
+<ion-content padding> 
+  <button ion-button icon-only menuToggle>
+    <ion-icon name="menu"></ion-icon>
+  </button>
+  <button ion-button block (click)="goSub()">跳转b页面</button>
+  <button block (click)="goZhu()">注册</button> -->
+<!-- </ion-content>
+  <ion-list>
+    <ion-item *ngFor="let i of items">{{i}}</ion-item>
+ </ion-list>
+  <ion-infinite-scroll (ionInfinite)="doInfinite($event)">
+    <ion-infinite-scroll-content></ion-infinite-scroll-content
+  </ion-infinite-scroll> -->
+  <!-- <ion-header>
+    <ion-navbar>
+      <ion-title><img src="../../assets/images/03.png" alt=""></ion-title>
+    </ion-navbar>
+    <ion-content>
+          <ul class="nav1">
+            <li><a href="">推荐</a></li>
+            <li><a href="">家具</a></li>
+            <li><a href="">餐厨</a></li>
+            <li><a href="">床上用品</a></li>
+          </ul>
+      </ion-content>
+  </ion-header>
+  <ion-content>
+  <ion-slides pager="true" autoplay="300"  >
+    <ion-slide class="sli">
+      <div class="img"><img src="../../assets/images/06.png" alt="" ></div>
+    </ion-slide>
+  </ion-slides>
+  </ion-content> -->
+
+  <ion-header text-center no-border>
+    <ion-navbar color="yel">
+      <button ion-button icon-only menuToggle>
+        <ion-icon name="menu"></ion-icon>
+      </button>
+      <ion-title>
+        桔家
+      </ion-title>
+      <ion-buttons end>
+        <button ion-button icon-only>
+          <ion-icon name="search"></ion-icon>
+        </button>
+      </ion-buttons>
+    </ion-navbar>
+  </ion-header>
+  <ion-content>
+    <!-- 底部tabs的字体和图标颜色，在app.scss里进行了设置，找到对应的类，设置好颜色就行
+    大家可以自己审查元素看看，或者改变variable.scss文件中的 primary 变量的颜色值，框架中大部分默认颜色都是这个变量 -->
+  
+    <!-- 导航栏 -->
+    <ul class="navList">
+      <li  [class.first]="isActive==0" (click)="isClick(0)">推荐</li>
+      <li [class.first]="isActive==1" (click)="isClick(1)">家居</li>
+      <li  [class.first]="isActive==2" (click)="isClick(2)">餐厨</li>
+      <li  [class.first]="isActive==3" (click)="isClick(3)">床上用品</li>
+    </ul>
+    <div [ngSwitch]="isActive">
+      <div *ngSwitchCase="0">
+        <ion-slides pager="true" autoplay="1000" loop="true" class="sli">
+          <ion-slide>
+            <img src="assets/imgs/slide1.png" alt="">
+          </ion-slide>
+          <ion-slide>
+            <img src="assets/imgs/slide1.png" alt="">
+          </ion-slide>
+          <ion-slide>
+            <img src="assets/imgs/slide1.png" alt="">
+          </ion-slide>
+        </ion-slides>
+        <div class="subtitle">
+            <h3 text-center>热|门|推|荐</h3>
+            <p text-center>RECOMMENDATION</p>
+        </div>
+        <!-- 商品列表没用grid，改用普通li了，大家看看怎么写 -->
+          <ul class="goods">
+              <li>
+                <img src="assets/imgs/img1.png" alt="">
+                <p>——北欧原木色——</p>
+                <span><ion-icon name="md-star-half"></ion-icon></span>
+              </li>
+              <li>
+                <img src="assets/imgs/img1.png" alt="">
+                <p>——北欧原木色——</p>
+                <span><ion-icon name="md-star-half"></ion-icon></span>
+              </li>
+              <li>
+                <img src="assets/imgs/img1.png" alt="">
+                <p>——北欧原木色——</p>
+                <span><ion-icon name="md-star-half"></ion-icon></span>
+              </li>
+              <li>
+                <img src="assets/imgs/img1.png" alt="">
+                <p>——北欧原木色——</p>
+                <span><ion-icon name="md-star-half"></ion-icon></span>
+              </li>
+              <li>
+                <img src="assets/imgs/img1.png" alt="">
+                <p>——北欧原木色——</p>
+                <span><ion-icon name="md-star-half"></ion-icon></span>
+              </li>
+              <li>
+                <img src="assets/imgs/img1.png" alt="">
+                <p>——北欧原木色—— </p>
+                <span><ion-icon name="md-star-half"></ion-icon></span>
+              </li>
+              
+          </ul>
+      </div>
+      <div *ngSwitchCase="1">
+          <ion-slides pager="true" autoplay="1000" loop="true" class="slide">
+            <ion-slide>
+              <img src="assets/imgs/slide2.png" alt="">
+            </ion-slide>
+            <ion-slide>
+              <img src="assets/imgs/slide2.png" alt="">
+            </ion-slide>
+            <ion-slide>
+              <img src="assets/imgs/slide2.png" alt="">
+            </ion-slide>
+          </ion-slides>
+          <ul class="goods1">
+            <li>
+              <img src="assets/imgs/keting.png" alt="">
+            </li>
+            <li>
+              <img src="assets/imgs/shufang.png" alt="">   
+            </li>
+            <li>
+              <img src="assets/imgs/menting.png" alt="">  
+            </li>
+          </ul>
+          <div class="subtitle">
+            <h3 text-center>桔|子|家|居</h3>
+            <p text-center>Orange household</p>
+          </div>
+        <ul class="jiajv">
+          <li>
+            <img src="assets/imgs/img1.png" alt="">
+            <p>——现代简约早餐桌——</p>
+            <span><ion-icon name="md-star-half"></ion-icon></span>
+          </li>
+          <li>
+            <img src="assets/imgs/img1.png" alt="">
+            <p>——现代简约早餐桌——</p>
+            <span><ion-icon name="md-star-half"></ion-icon></span>
+          </li>
+          <li>
+            <img src="assets/imgs/img1.png" alt="">
+            <p>——现代简约早餐桌——</p>
+            <span><ion-icon name="md-star-half"></ion-icon></span>
+          </li>
+          <li>
+            <img src="assets/imgs/img1.png" alt="">
+            <p>——现代简约早餐桌——</p>
+            <span><ion-icon name="md-star-half"></ion-icon></span>
+          </li>
+        </ul>
+      </div>
+      <div *ngSwitchCase="2"></div>
+      <div *ngSwitchCase="3"></div>
+    </div>
+    <!-- <ion-slides pager="true" autoplay="1000" loop="true" class="sli">
+      <ion-slide>
+        <img src="assets/imgs/slide1.png" alt="">
+      </ion-slide>
+      <ion-slide>
+        <img src="assets/imgs/slide1.png" alt="">
+      </ion-slide>
+      <ion-slide>
+        <img src="assets/imgs/slide1.png" alt="">
+      </ion-slide>
+    </ion-slides>
+    <div class="subtitle">
+        <h3 text-center>热|门|推|荐</h3>
+        <p text-center>RECOMMENDATION</p>
+    </div>
+    商品列表没用grid，改用普通li了，大家看看怎么写 
+    <ul class="goods">
+          <li>
+            <img src="assets/imgs/img1.png" alt="">
+            <p>——北欧原木色——</p>
+            <span><ion-icon name="md-star-half"></ion-icon></span>
+          </li>
+          <li>
+            <img src="assets/imgs/img1.png" alt="">
+            <p>——北欧原木色——</p>
+            <span><ion-icon name="md-star-half"></ion-icon></span>
+          </li>
+          <li>
+            <img src="assets/imgs/img1.png" alt="">
+            <p>——北欧原木色——</p>
+            <span><ion-icon name="md-star-half"></ion-icon></span>
+          </li>
+          <li>
+            <img src="assets/imgs/img1.png" alt="">
+            <p>——北欧原木色——</p>
+            <span><ion-icon name="md-star-half"></ion-icon></span>
+          </li>
+          <li>
+            <img src="assets/imgs/img1.png" alt="">
+            <p>——北欧原木色——</p>
+            <span><ion-icon name="md-star-half"></ion-icon></span>
+          </li>
+          <li>
+            <img src="assets/imgs/img1.png" alt="">
+            <p>——北欧原木色—— </p>
+            <span><ion-icon name="md-star-half"></ion-icon></span>
+          </li>
+          
+      </ul> -->
+</ion-content>
